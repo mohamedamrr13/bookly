@@ -1,8 +1,6 @@
-import 'package:bookly/Features/home/presentation/views/widgets/best_seller_item.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/best_seller_listview.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_app_bar.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/horizontol_listview.dart';
-
+import 'package:bookly/Features/home/presentation/views/widgets/featured_listview.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
               SafeArea(child: CustomAppBar()),
               SizedBox(
                 height: 250,
-                child: HorizontolListView(),
+                child: FeaturedListView(),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 24.0, left: 30),
@@ -32,8 +30,8 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverFillRemaining(
-          child: Expanded(child: BestSellerListView()),
+        SliverToBoxAdapter(
+          child: BestSellerListView(),
         )
       ],
     );

@@ -9,7 +9,7 @@ class BestSellerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 175,
+      height: 160,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Row(
@@ -55,7 +55,7 @@ class BestSellerItem extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 3,
+                    height: 6,
                   ),
                   SizedBox(
                     height: 30,
