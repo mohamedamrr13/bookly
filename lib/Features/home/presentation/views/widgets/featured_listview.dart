@@ -24,7 +24,7 @@ class FeaturedListView extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 16.0, bottom: 24),
                 child: GestureDetector(
                   onTap: () {
-                    context.go(AppRouter.detailsviewPath,
+                    GoRouter.of(context).push(AppRouter.detailsviewPath,
                         extra: state.books[index]);
                   },
                   child: CustomBookImage(

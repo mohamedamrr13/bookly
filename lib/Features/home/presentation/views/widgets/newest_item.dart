@@ -19,7 +19,8 @@ class NewestItem extends StatelessWidget {
         child: Row(
           children: [
             GestureDetector(
-              onTap: () => context.go(AppRouter.detailsviewPath, extra: book),
+              onTap: () => GoRouter.of(context)
+                  .push(AppRouter.detailsviewPath, extra: book),
               child: CustomBookImage(
                   imageUrl: book.volumeInfo.imageLinks?.thumbnail ?? ''),
             ),

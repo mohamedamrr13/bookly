@@ -24,7 +24,7 @@ class SimillarBooksListview extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.only(right: 16.0, bottom: 24),
                     child: GestureDetector(
-                      onTap: () => context.go(AppRouter.detailsviewPath,
+                      onTap: () => context.push(AppRouter.detailsviewPath,
                           extra: state.books[index]),
                       child: CustomBookImage(
                         imageUrl: state.books[index].volumeInfo.imageLinks
